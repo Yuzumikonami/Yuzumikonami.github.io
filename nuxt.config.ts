@@ -2,11 +2,6 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  // 注册模块
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxt/ui'
-  ],
-  // 引入全局 CSS 文件
+  modules: ['@nuxt/ui'],
   css: ['~/assets/css/main.css']
 })
