@@ -46,6 +46,6 @@
 @layer base {
     /* 深色模式下的覆盖 */
     .dark {
-        --color-primary-500: #818cf8;   /* 深色下用更亮的紫蓝 */
+        --color-primary-500: #818cf8; /* 深色下用更亮的紫蓝 */
     }
 }

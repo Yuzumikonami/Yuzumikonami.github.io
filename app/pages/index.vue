@@ -9,22 +9,22 @@ const profile = {
 }
 
 const socialLinks = [
-  { name: 'B站', icon: 'i-simple-icons-bilibili', url: 'https://space.bilibili.com/3461565743368895' },
-  { name: 'GitHub', icon: 'i-simple-icons-github', url: 'https://github.com/Yuzumikonami' },
-  { name: 'Gitee', icon: 'i-simple-icons-gitee', url: 'https://gitee.com/Yuzumikonami' },
+  {name: 'B站', icon: 'i-simple-icons-bilibili', url: 'https://space.bilibili.com/3461565743368895'},
+  {name: 'GitHub', icon: 'i-simple-icons-github', url: 'https://github.com/Yuzumikonami'},
+  {name: 'Gitee', icon: 'i-simple-icons-gitee', url: 'https://gitee.com/Yuzumikonami'},
 ]
 
 const projects = [
-  { name: 'AetherCraft MC开服脚本', url: 'https://aether-craft.jnxnlr.top/' },
-  { name: '蔚蓝档案logo生成器', url: 'https://ba-logo.jnxnlr.top' },
+  {name: 'AetherCraft MC开服脚本', url: 'https://aether-craft.jnxnlr.top/'},
+  {name: '蔚蓝档案logo生成器', url: 'https://ba-logo.jnxnlr.top'},
 ]
 
 // SEO 优化
 useHead({
   title: '柚见小南 · 个人主页',
   meta: [
-    { name: 'description', content: '柚见小南Yuzumikonami的个人主页，喵喵喵，咕噜咕噜～' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    {name: 'description', content: '柚见小南Yuzumikonami的个人主页，喵喵喵，咕噜咕噜～'},
+    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
   ],
 })
 </script>
@@ -33,7 +33,8 @@ useHead({
   <div class="max-w-3xl mx-auto px-4 py-8 space-y-10 animate-fade-in">
 
     <!-- 玻璃态背景卡片 -->
-    <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-8 rounded-[--radius-card] shadow-lg ring-1 ring-black/5 dark:ring-white/10 space-y-8">
+    <div
+        class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-8 rounded-[--radius-card] shadow-lg ring-1 ring-black/5 dark:ring-white/10 space-y-8">
 
       <!-- 头像 + 简介区 -->
       <section class="text-center space-y-4">
@@ -65,7 +66,7 @@ useHead({
             size="lg"
             class="text-2xl hover:scale-110 transition-transform"
         >
-          <UIcon :name="link.icon" class="text-primary-500 dark:text-primary-400" />
+          <UIcon :name="link.icon" class="text-primary-500 dark:text-primary-400"/>
           {{ link.name }}
         </UButton>
       </section>
@@ -107,7 +108,8 @@ useHead({
     </div>
 
     <!-- 页脚小彩蛋 -->
-    <footer class="text-center text-sm text-gray-400 dark:text-gray-500 pt-4 border-t border-gray-200/50 dark:border-gray-700/50">
+    <footer
+        class="text-center text-sm text-gray-400 dark:text-gray-500 pt-4 border-t border-gray-200/50 dark:border-gray-700/50">
       © 2026 柚见小南 · 用 🐾 和 ❤️ 搭建喵w~
     </footer>
   </div>
