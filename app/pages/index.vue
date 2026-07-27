@@ -77,17 +77,20 @@ useHead({
           🚀 私のProjects
         </h2>
         <div class="grid gap-4 sm:grid-cols-2">
-          <UCard
+          <ULink
               v-for="project in projects"
               :key="project.name"
               :to="project.url"
               target="_blank"
-              class="hover:shadow-xl transition-all duration-300 cursor-pointer border-0 rounded-[--radius-card] !bg-white/60 dark:!bg-slate-700/60 backdrop-blur-sm"
+              class="block"
           >
-            <h3 class="font-medium text-center text-primary-600 dark:text-primary-400">
-              {{ project.name }}
-            </h3>
-          </UCard>
+            <UCard
+                class="hover:shadow-xl transition-all duration-300 cursor-pointer border-0 rounded-[--radius-card] !bg-white/60 dark:!bg-slate-700/60 backdrop-blur-sm">
+              <h3 class="font-medium text-center text-primary-600 dark:text-primary-400">
+                {{ project.name }}
+              </h3>
+            </UCard>
+          </ULink>
         </div>
       </section>
 

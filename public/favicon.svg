@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+    <defs>
+        <!-- 投影滤镜，增加立体感 -->
+        <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+            <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#D1C4B0" flood-opacity="0.25"/>
+        </filter>
+
+        <!-- 渐变① 上瓣（12点）：纯粉红心柚起点（顺时针第一站） -->
+        <linearGradient id="gradPink" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F9A8D4"/>
+            <stop offset="100%" stop-color="#F472B6"/>
+        </linearGradient>
+
+        <!-- 渐变② 右下瓣（4点）：粉红→黄色过渡（顺时针第二站） -->
+        <linearGradient id="gradPinkToYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F472B6"/>
+            <stop offset="100%" stop-color="#FDE68A"/>
+        </linearGradient>
+
+        <!-- 渐变③ 左下瓣（8点）：黄色→粉红过渡（顺时针第三站，闭环回到粉红） -->
+        <linearGradient id="gradYellowToPink" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#FDE68A"/>
+            <stop offset="100%" stop-color="#F9A8D4"/>
+        </linearGradient>
+    </defs>
+
+    <!-- 背景：柔和米白 -->
+    <circle cx="60" cy="60" r="56" fill="#FCF6ED" filter="url(#shadow)"/>
+
+    <!-- 外圈装饰细环 -->
+    <circle cx="60" cy="60" r="52" fill="none" stroke="#E8D5B5" stroke-width="1.5" opacity="0.5"/>
+    <circle cx="60" cy="60" r="48" fill="none" stroke="#F5E3C8" stroke-width="1" opacity="0.4"/>
+
+    <!-- ====== 三瓣柚瓣（顺时针顺序：12点→4点→8点） ====== -->
+
+    <!-- 瓣① 上瓣（12点）：粉红起点 -->
+    <g>
+        <path d="M 60,60 L 60,8 A 52 52 0 0 1 105,35 Z" fill="#FEFEFE" stroke="#E8D5B5" stroke-width="1.5"/>
+        <path d="M 60,60 L 64,16 A 44 44 0 0 1 97.5,37 Z" fill="url(#gradPink)"/>
+        <path d="M 60,60 L 66,20 A 38 38 0 0 1 92,40 Z" fill="#FFFFFF" opacity="0.25"/>
+    </g>
+
+    <!-- 瓣② 右下瓣（4点）：粉红→黄色过渡 -->
+    <g>
+        <path d="M 60,60 L 105,35 A 52 52 0 0 1 60,112 Z" fill="#FEFEFE" stroke="#E8D5B5" stroke-width="1.5"/>
+        <path d="M 60,60 L 97.5,37 A 44 44 0 0 1 60,104 Z" fill="url(#gradPinkToYellow)"/>
+        <path d="M 60,60 L 92,40 A 38 38 0 0 1 60,98 Z" fill="#FFFFFF" opacity="0.25"/>
+    </g>
+
+    <!-- 瓣③ 左下瓣（8点）：黄色→粉红过渡（完美解决6点到10点无渐变的问题） -->
+    <g>
+        <path d="M 60,60 L 60,112 A 52 52 0 0 1 15,35 Z" fill="#FEFEFE" stroke="#E8D5B5" stroke-width="1.5"/>
+        <path d="M 60,60 L 60,104 A 44 44 0 0 1 22.5,37 Z" fill="url(#gradYellowToPink)"/>
+        <path d="M 60,60 L 60,98 A 38 38 0 0 1 28,40 Z" fill="#FFFFFF" opacity="0.25"/>
+    </g>
+
+    <!-- ====== 中心柚子芯 ====== -->
+    <circle cx="60" cy="60" r="10" fill="#FFFDF5" stroke="#E8D5B5" stroke-width="1.5"/>
+    <circle cx="57" cy="57" r="4" fill="#FEF9E7" opacity="0.6"/>
+    <circle cx="62" cy="63" r="2" fill="#D4C84A" opacity="0.4"/>
+
+    <!-- ====== 三瓣之间的分隔线 ====== -->
+    <line x1="60" y1="60" x2="60" y2="8" stroke="#E8D5B5" stroke-width="1.5" opacity="0.8"/>
+    <line x1="60" y1="60" x2="105" y2="35" stroke="#E8D5B5" stroke-width="1.5" opacity="0.8"/>
+    <line x1="60" y1="60" x2="60" y2="112" stroke="#E8D5B5" stroke-width="1.5" opacity="0.8"/>
+
+    <!-- ====== 底部阴影 ====== -->
+    <ellipse cx="60" cy="92" rx="32" ry="6" fill="#E8DCC8" opacity="0.3"/>
+
+    <!-- ====== 文字 Yuzumi ====== -->
+    <text x="60" y="98"
+          font-family="'Georgia', 'Times New Roman', serif"
+          font-size="20"
+          font-weight="700"
+          fill="#6B5E4A"
+          text-anchor="middle"
+          letter-spacing="3.5"
+          opacity="0.9">
+        Yuzumi
+    </text>
+</svg>
