@@ -25,6 +25,16 @@ useHead({
   meta: [
     { name: 'description', content: '柚见小南Yuzumikonami的个人主页，喵喵喵，咕噜咕噜～' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'theme-color', content: '#f472b6' },
+    { property: 'og:title', content: '柚见小南の个人主页' },
+    { property: 'og:description', content: '小南最可爱力喵！' },
+    { property: 'og:image', content: 'https://www.jnxnlr.top/favicon_bkup.svg' },
+    { property: 'og:url', content: 'https://www.jnxnlr.top/' },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: '柚见小南の个人主页' },
+    { name: 'twitter:description', content: '小南最可爱力喵！' },
+    { name: 'twitter:image', content: 'https://www.jnxnlr.top/favicon_bkup.svg' },
   ],
 })
 
