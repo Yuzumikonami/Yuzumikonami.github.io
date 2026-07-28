@@ -5,6 +5,6 @@ export default defineNuxtConfig({
     modules: ['@nuxt/ui'],
     css: ['~/assets/css/main.css'],
     nitro: {
-        preset: 'cloudflare-module',   // ← 注意是 连字符（-），不是下划线（_）
+        preset: 'cloudflare-module',
     }
 })
