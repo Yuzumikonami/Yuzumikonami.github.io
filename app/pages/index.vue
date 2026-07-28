@@ -3,7 +3,7 @@
 const profile = {
   name: '柚见小南Yuzumikonami',
   title: '一个普通高中牲 🐣',
-  bio: '周六随缘更新 · 爱写 bash 和 HTML · 爱玩 MC 和 BA',
+  bio: '喵喵喵 咕噜咕噜～ · 爱写 bash 和 HTML · 爱玩 MC 和 BA',
   waifu: '伊落玛丽～～',
   motto: '与你的日常，就是奇迹！',
 }
@@ -21,7 +21,7 @@ const projects = [
 
 // SEO 优化
 useHead({
-  title: '柚见小南 · 个人主页',
+  title: '柚见小南の个人主页喵w',
   meta: [
     {name: 'description', content: '柚见小南Yuzumikonami的个人主页，喵喵喵，咕噜咕噜～'},
     {name: 'viewport', content: 'width=device-width, initial-scale=1'},
