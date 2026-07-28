@@ -104,7 +104,7 @@ useHead({
             size="lg"
             class="rounded-full px-6 hover:scale-105 transition-transform"
         >
-          💬 一个小交流群
+          💬 窝的聊天群喵
         </UButton>
       </section>
 
