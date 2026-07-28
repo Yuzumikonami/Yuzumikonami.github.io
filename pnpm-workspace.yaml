@@ -1,3 +1,5 @@
+packages:
+  - '**'
 dangerouslyAllowAllBuilds: true
 allowBuilds:
   esbuild: true
