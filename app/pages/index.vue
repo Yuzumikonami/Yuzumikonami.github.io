@@ -3,38 +3,44 @@
 const profile = {
   name: '柚见小南Yuzumikonami',
   title: '一个普通高中牲 🐣',
-  bio: '泥豪喵！这里是窝的个人主页喵\n📍 南京 · 准高一 · ISFP · 猫猫\n🎮 MC & BA 玩家 · 玛丽厨\n💻 科技树：Kotlin、网页开发（debug 中）\n🌐 中/英/日（日语学习中）\n✨ 成分复杂，但很好贴～ 来找窝玩喵！',
+  bio: '泥豪喵！这里是窝的个人主页喵\n📍 南京 · 准高一 · ISFP · 猫猫\n🎮 MC & BA 玩家 · 玛丽厨\n💻 科技树：Kotlin、网页开发（debug 中）....\n🌐 中/英/日（日语学习中）\n✨ 成分复杂，但很好贴～ 来找窝玩喵！',
   waifu: '伊落玛丽是怼的喵！',
   motto: '与你的日常，就是奇迹！',
 }
 
 const socialLinks = [
-  { name: 'B站', icon: 'i-simple-icons-bilibili', url: 'https://space.bilibili.com/3461565743368895' },
-  { name: 'GitHub', icon: 'i-simple-icons-github', url: 'https://github.com/Yuzumikonami' },
-  { name: 'Gitee', icon: 'i-simple-icons-gitee', url: 'https://gitee.com/Yuzumikonami' },
+  {name: 'B站', icon: 'i-simple-icons-bilibili', url: 'https://space.bilibili.com/3461565743368895'},
+  {name: 'GitHub', icon: 'i-simple-icons-github', url: 'https://github.com/Yuzumikonami'},
+  {name: 'Gitee', icon: 'i-simple-icons-gitee', url: 'https://gitee.com/Yuzumikonami'},
 ]
 
 const projects = [
-  { name: 'AetherCraft MC开服脚本', url: 'https://aether-craft.jnxnlr.top/' },
-  { name: '蔚蓝档案logo生成器', url: 'https://ba-logo.jnxnlr.top' },
+  {name: 'AetherCraft MC开服脚本', url: 'https://aether-craft.jnxnlr.top/'},
+  {name: '蔚蓝档案logo生成器', url: 'https://ba-logo.jnxnlr.top'},
 ]
 
 // SEO 优化
 useHead({
   title: '柚见小南の个人主页喵w',
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/svg+xml',
+      href: '/favicon.svg'
+    }],
   meta: [
-    { name: 'description', content: '柚见小南Yuzumikonami的个人主页，喵喵喵，咕噜咕噜～' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { name: 'theme-color', content: '#f472b6' },
-    { property: 'og:title', content: '柚见小南の个人主页' },
-    { property: 'og:description', content: '小南最可爱力喵！' },
-    { property: 'og:image', content: 'https://www.jnxnlr.top/favicon_bkup.svg' },
-    { property: 'og:url', content: 'https://www.jnxnlr.top/' },
-    { property: 'og:type', content: 'website' },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: '柚见小南の个人主页' },
-    { name: 'twitter:description', content: '小南最可爱力喵！' },
-    { name: 'twitter:image', content: 'https://www.jnxnlr.top/favicon_bkup.svg' },
+    {name: 'description', content: '柚见小南Yuzumikonami的个人主页，喵喵喵，咕噜咕噜～'},
+    {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+    {name: 'theme-color', content: '#f472b6'},
+    {property: 'og:title', content: '柚见小南の个人主页'},
+    {property: 'og:description', content: '小南最可爱力喵！'},
+    {property: 'og:image', content: 'https://www.jnxnlr.top/favicon_bkup.svg'},
+    {property: 'og:url', content: 'https://www.jnxnlr.top/'},
+    {property: 'og:type', content: 'website'},
+    {name: 'twitter:card', content: 'summary_large_image'},
+    {name: 'twitter:title', content: '柚见小南の个人主页'},
+    {name: 'twitter:description', content: '小南最可爱力喵！'},
+    {name: 'twitter:image', content: 'https://www.jnxnlr.top/favicon_bkup.svg'},
   ],
 })
 
@@ -43,7 +49,7 @@ useHead({
 function triggerEasterEgg(event: MouseEvent) {
   const messages = [
     '🐾 喵呜～！',
-    '✨ 揪你尾巴！',
+    '✨ 摸摸捏喵！',
     '🌸 今天也要开心喵！',
     '🎀 小南最可爱啦！',
     '💕 贴贴～！',
@@ -87,16 +93,17 @@ function triggerEasterEgg(event: MouseEvent) {
   <div class="max-w-3xl mx-auto px-4 py-8 space-y-10 animate-fade-in">
 
     <!-- 玻璃态背景卡片 -->
-    <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-8 rounded-[--radius-card] shadow-lg ring-1 ring-black/5 dark:ring-white/10 space-y-8">
+    <div
+        class="bg-white/70 dark:bg-slate-800/70 backdrop-blur-md p-8 rounded-[--radius-card] shadow-lg ring-1 ring-black/5 dark:ring-white/10 space-y-8">
 
       <!-- 头像 + 简介区 -->
       <section class="text-center space-y-4">
         <UAvatar
-          src="/images/Yuzumikonami.jfif"
-          alt="柚见小南の头像"
-          size="3xl"
-          class="mx-auto ring-4 ring-primary-200 dark:ring-primary-800 !w-44 !h-44 transition-transform hover:scale-105"
-          @click="triggerEasterEgg"
+            src="/images/Yuzumikonami.jfif"
+            alt="柚见小南の头像"
+            size="3xl"
+            class="mx-auto ring-4 ring-primary-200 dark:ring-primary-800 !w-44 !h-44 transition-transform hover:scale-105"
+            @click="triggerEasterEgg"
         />
         <h1 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary-500 to-purple-500 bg-clip-text text-transparent break-words text-wrap-balance max-w-full">
           {{ profile.name }}
@@ -113,16 +120,16 @@ function triggerEasterEgg(event: MouseEvent) {
       <!-- 社交链接 -->
       <section class="flex justify-center gap-4 flex-wrap">
         <UButton
-          v-for="link in socialLinks"
-          :key="link.name"
-          :to="link.url"
-          target="_blank"
-          color="neutral"
-          variant="ghost"
-          size="lg"
-          class="text-2xl hover:scale-110 transition-transform"
+            v-for="link in socialLinks"
+            :key="link.name"
+            :to="link.url"
+            target="_blank"
+            color="neutral"
+            variant="ghost"
+            size="lg"
+            class="text-2xl hover:scale-110 transition-transform"
         >
-          <UIcon :name="link.icon" class="text-primary-500 dark:text-primary-400" />
+          <UIcon :name="link.icon" class="text-primary-500 dark:text-primary-400"/>
           {{ link.name }}
         </UButton>
       </section>
@@ -134,13 +141,14 @@ function triggerEasterEgg(event: MouseEvent) {
         </h2>
         <div class="grid gap-4 sm:grid-cols-2">
           <ULink
-            v-for="project in projects"
-            :key="project.name"
-            :to="project.url"
-            target="_blank"
-            class="block"
+              v-for="project in projects"
+              :key="project.name"
+              :to="project.url"
+              target="_blank"
+              class="block"
           >
-            <UCard class="hover:shadow-xl transition-all duration-300 cursor-pointer border-0 rounded-[--radius-card] !bg-white/60 dark:!bg-slate-700/60 backdrop-blur-sm">
+            <UCard
+                class="hover:shadow-xl transition-all duration-300 cursor-pointer border-0 rounded-[--radius-card] !bg-white/60 dark:!bg-slate-700/60 backdrop-blur-sm">
               <h3 class="font-medium text-center text-primary-600 dark:text-primary-400">
                 {{ project.name }}
               </h3>
@@ -152,12 +160,12 @@ function triggerEasterEgg(event: MouseEvent) {
       <!-- 💬 交流群 -->
       <section class="text-center pt-2">
         <UButton
-          to="https://qm.qq.com/q/8ZP3nqsiAw"
-          target="_blank"
-          color="primary"
-          variant="soft"
-          size="lg"
-          class="rounded-full px-6 hover:scale-105 transition-transform"
+            to="https://qm.qq.com/q/8ZP3nqsiAw"
+            target="_blank"
+            color="primary"
+            variant="soft"
+            size="lg"
+            class="rounded-full px-6 hover:scale-105 transition-transform"
         >
           💬 窝的聊天群喵
         </UButton>
