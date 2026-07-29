@@ -58,7 +58,7 @@ function triggerEasterEgg(event: MouseEvent) {
   el.textContent = text
   el.style.position = 'fixed'
   el.style.left = `${Math.random() * 80 + 10}%`
-  el.style.top = '0%'
+  el.style.top = `${Math.random() * 70 + 20}%`
   el.style.fontSize = `${Math.random() * 24 + 20}px`
   el.style.fontWeight = 'bold'
   el.style.color = `hsl(${Math.random() * 360}, 80%, 60%)`
@@ -67,19 +67,17 @@ function triggerEasterEgg(event: MouseEvent) {
   el.style.textShadow = '0 2px 10px rgba(0,0,0,0.2)'
   el.style.transition = 'all 3s cubic-bezier(0.2, 0.8, 0.2, 1)'
   el.style.opacity = '1'
-  el.style.transform = `rotate(${Math.random() * 60 - 30}deg)`
-
+  el.style.transform = `translate(-50%, -50%) rotate(${Math.random() * 60 - 30}deg)`
   document.body.appendChild(el)
 
   requestAnimationFrame(() => {
-    el.style.top = `${Math.random() * 70 + 20}%`
     el.style.opacity = '0.8'
-    el.style.transform += ` scale(1.2)`
+    el.style.transform = `translate(-50%, -50%) rotate(${Math.random() * 60 - 30}deg) scale(1.2)`
   })
 
   setTimeout(() => {
     el.style.opacity = '0'
-    el.style.transform += ' scale(0.8)'
+    el.style.transform = `translate(-50%, -50%) rotate(${Math.random() * 60 - 30}deg) scale(0.8)`
     setTimeout(() => el.remove(), 500)
   }, 3500)
 }
@@ -100,7 +98,7 @@ function triggerEasterEgg(event: MouseEvent) {
           class="mx-auto ring-4 ring-primary-200 dark:ring-primary-800 !w-44 !h-44 transition-transform hover:scale-105"
           @click="triggerEasterEgg"
         />
-        <h1 class="text-4xl font-bold bg-gradient-to-r from-primary-500 to-purple-500 bg-clip-text text-transparent">
+        <h1 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-primary-500 to-purple-500 bg-clip-text text-transparent break-words text-wrap-balance max-w-full">
           {{ profile.name }}
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-300">{{ profile.title }}</p>
