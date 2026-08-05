@@ -17,6 +17,7 @@ const socialLinks = [
 const projects = [
   {name: 'AetherCraft MC开服脚本', url: 'https://aether-craft.jnxnlr.top/'},
   {name: '蔚蓝档案logo生成器', url: 'https://ba-logo.jnxnlr.top'},
+  {name: '哔哩哔哩视频下载器', url: 'https://github.com/Yuzumikonami/bilimp4downloader'},
 ]
 
 // SEO 优化
@@ -34,19 +35,19 @@ useHead({
     {name: 'theme-color', content: '#f472b6'},
     {property: 'og:title', content: '柚见小南の个人主页'},
     {property: 'og:description', content: '小南最可爱力喵！'},
-    {property: 'og:image', content: 'https://www.jnxnlr.top/favicon_bkup.svg'},
-    {property: 'og:url', content: 'https://www.jnxnlr.top/'},
+    {property: 'og:image', content: 'https://www.konatonami.top/favicon_bkup.svg'},
+    {property: 'og:url', content: 'https://www.konatonami.top/'},
     {property: 'og:type', content: 'website'},
     {name: 'twitter:card', content: 'summary_large_image'},
     {name: 'twitter:title', content: '柚见小南の个人主页'},
     {name: 'twitter:description', content: '小南最可爱力喵！'},
-    {name: 'twitter:image', content: 'https://www.jnxnlr.top/favicon_bkup.svg'},
+    {name: 'twitter:image', content: 'https://www.konatonami.top/favicon_bkup.svg'},
   ],
 })
 
 
 //彩蛋喵！！！
-function triggerEasterEgg(event: MouseEvent) {
+function triggerEasterEgg() {
   const messages = [
     '🐾 喵呜～！',
     '✨ 摸摸捏喵！',
